@@ -1,0 +1,381 @@
+<form [formGroup]="addVehFormFb">
+<!--Título-->
+<div class="titulo_seccion">
+    <div class="titulo_cuadro">
+      <img src="../../assets/componentes/cuadro_titulo.jpg" />
+    </div>
+    <div class="titulo_texto">CLIENTE / DESTINO</div>
+   
+    <div class="titulo_botones">
+      <ul>
+        <li>
+          <!--<a class="boton_guardar" (click)="guardar()">Guardar</a>-->
+          <button 
+            class="boton_guardar" 
+            style="background-color: #852121;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: right;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            width: 108px;
+            border-style: none;" 
+            type="submit"
+            (click)="guardar()" 
+            >
+            Guardar
+          </button>
+        </li>
+        <li>
+          <a class="boton_cancelar" (click)="cancelar()">Cancelar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--Encabezado tabla-->
+  <div class="contenido">
+    <!--Contenido editable-->
+    <div class="informativo labelS100">
+      <div class="fila">
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Operación</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Vehículo</div>
+          <div class="datos">
+            <input 
+            type="text" 
+            name="veh"
+           formControlName="veh"
+             />
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Status</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_7-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Descripción</div>
+          <div class="datos">
+            <input type="text" placeholder="DESCRIPCIÓN">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal">Tipo</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Transportista</div>
+          <div class="datos">
+            <input type="text" >
+          </div>
+        </div>
+        <div class="size_5c">
+          <div class="etiqueta_principal">Operador</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Placas</div>
+          <div class="datos">
+            <input type="text" >
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal">Marca</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal">Modelo</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal">Color</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Plataforma</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <p hidden>{{bodyText}}</p>
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Antena</div>
+          <div class="datos">
+            <div class="lov">
+              <input type="text"   name="antena" formControlName="antena"   >
+              <a>
+                <img src="../../assets/componentes/lov_18.png" (click)="openModal('custom-modal-1')">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Plataforma 2</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Antena 2</div>
+          <div class="datos">
+            <div class="lov">
+              <input type="text" name="antena2" formControlName="antena2">
+              <a>
+                <img src="../../assets/componentes/lov_18.png" (click)="openModal('custom-modal-2')">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_5c">
+          <div class="etiqueta_principal">Motor</div>
+          <div class="datos">
+            <input type="text" >
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> No. Ejes</div>
+          <div class="datos">
+            <input type="number">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> No. Serie</div>
+          <div class="datos">
+            <input type="text" value="41AGAZ">
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_5c">
+          <div class="etiqueta_principal">Tipo de Permiso</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Permiso Federal</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="size_5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> IAVE</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Peso</div>
+          <div class="datos">
+            <input type="number" class="txt-right">
+          </div>
+        </div>
+        <div class="size_2-5c">
+          <div class="etiqueta_principal"><span class="asterisco">*</span> Arrendado</div>
+            <div class="datos">
+              <input id="arrendado" type="checkbox" checked="checked">
+              <label for="arrendado"></label>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!--    Modal Antena 1         -->
+<jw-modal id="custom-modal-1">
+
+  <div class="cajas">
+    <div class="informativo s1100 flex-wrap-colum">
+      <div class="fila">
+       
+        
+       
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">CLAVE DE ANTENA:</div>
+          <div class="datos">
+            <input type="text" name="txtAntena" [(ngModel)]="txtFiltroAntena" >
+          </div>
+        </div>
+       
+        <div class="size_1-1c">
+          <div class="datos align-self-end">
+            <input type="button" value="Buscar" (click)="buscarAntenas(false)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Encabezado tabla -->
+   <div class="nombretabla">
+    <div class="nombretabla_texto">
+      <label>ANTENAS</label>
+      <div class="paginas">
+        <label class="paginas1"> {{totalAntenas}} </label>
+        <label class="paginas2">RESULTADOS EN</label>
+        <label class="paginas3"> {{totalPaginas}} </label>
+        <label class="paginas2">PÁGINA(S)</label>
+        <label class="selector">
+          <select [(ngModel)]='selectedPaginas' (ngModelChange)="onChange($event)">
+            <option *ngFor="let pags of allPaginas">
+              {{ pags }}
+            </option>
+           </select>
+        
+        </label>
+        <div class="botonPagA">
+          <img src="../../assets/componentes/b_anterior.png" (click)="pagAnterior()"/>
+        </div>
+        <label class="paginas5"> {{paginaActual}} </label>
+        <div class="botonPagS">
+          <img src="../../assets/componentes/b_siguiente.png" (click)="pagSiguiente()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Tabla -->
+   <div class="table-container table-doble">
+    <table class="scrollTableX">
+      <thead>
+        <tr>
+          <th class="txt-center"></th>
+          <th class="cVvehiculo txt-left">Clave</th>
+          <th class="cVdescripcion txt-left">Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let antena of antenasAux ">
+          <td class="txt-center"  (click)="selecAntena(antena.clave)">
+              <img src="../../assets/logos/trackit.png" style="cursor:pointer">
+          </td>
+          <td>
+            <label> {{antena.clave}} </label>
+          </td>
+          <td>
+            <label> {{antena.descripcion}} </label>
+          </td> 
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+<!--    Modal Antena 1         -->
+<!--    Modal Antena 2         -->
+<jw-modal id="custom-modal-2">
+
+  <div class="cajas">
+    <div class="informativo s1100 flex-wrap-colum">
+      <div class="fila">
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">CLAVE DE ANTENA:</div>
+          <div class="datos">
+            <input type="text" name="txtAntena2" [(ngModel)]="txtFiltroAntena2" >
+          </div>
+        </div>
+        <div class="size_1-1c">
+          <div class="datos align-self-end">
+            <input type="button" value="Buscar" (click)="buscarAntenas2(false)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Encabezado tabla -->
+   <div class="nombretabla">
+    <div class="nombretabla_texto">
+      <label>ANTENAS</label>
+      <div class="paginas">
+        <label class="paginas1"> {{totalAntenas2}} </label>
+        <label class="paginas2">RESULTADOS EN</label>
+        <label class="paginas3"> {{totalPaginas2}} </label>
+        <label class="paginas2">PÁGINA(S)</label>
+        <label class="selector">
+          <select [(ngModel)]='selectedPaginas2' (ngModelChange)="onChange($event)">
+            <option *ngFor="let pags of allPaginas2">
+              {{ pags }}
+            </option>
+           </select>
+        </label>
+        <div class="botonPagA">
+          <img src="../../assets/componentes/b_anterior.png" (click)="pagAnterior2()"/>
+        </div>
+        <label class="paginas5"> {{paginaActual2}} </label>
+        <div class="botonPagS">
+          <img src="../../assets/componentes/b_siguiente.png" (click)="pagSiguiente2()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Tabla -->
+   <div class="table-container table-doble">
+    <table class="scrollTableX">
+      <thead>
+        <tr>
+          <th class="txt-center"></th>
+          <th class="cVvehiculo txt-left">Clave</th>
+          <th class="cVdescripcion txt-left">Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let antena of antenasAux2 ">
+          <td class="txt-center"  (click)="selecAntena2(antena.clave)">
+              <img src="../../assets/logos/trackit.png" style="cursor:pointer">
+          </td>
+          <td>
+            <label> {{antena.clave}} </label>
+          </td>
+          <td>
+            <label> {{antena.descripcion}} </label>
+          </td> 
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>
+<!--    Modal Antena 2         -->

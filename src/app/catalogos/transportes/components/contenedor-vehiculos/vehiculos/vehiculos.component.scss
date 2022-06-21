@@ -1,0 +1,51 @@
+// Estilos generales
+@import "../../../../../../estilos/mixins";
+
+// Columnas
+.cVoperacion {
+	width: 30px;
+}
+
+.cVdescripcion,
+.cVtransportista,
+.cVoperador,
+.cVtipo_seguro
+.cVaseguradora { 
+	min-width: 180px;
+}
+
+.cVvehiculo {
+	width: 100px;
+}
+
+.cVscac {
+	width: 60px;
+}
+
+.cVplacas {
+	width: 80px;
+}
+
+.cVplataforma {
+	width: 120px;
+}
+.cVantena {
+	width: 80px;
+}
+
+.cVstatus {
+	width: 110px;
+}
+
+.cVnumero_poliza{
+	width: 130px;
+}
+
+.cVfecha_vencimiento{
+	width: 160px;
+}
+// Alturas
+.table-doble {
+	height: calc((100vh - 268px) / 2);
+	min-height: 250px;
+}

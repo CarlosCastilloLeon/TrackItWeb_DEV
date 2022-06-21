@@ -1,0 +1,325 @@
+
+<!-- Contenido-->
+<div class="contenido" >
+   
+    <!-- Título -->
+    <div class="titulo_seccion">
+      <div class="titulo_cuadro">
+        <img src="../../assets/componentes/cuadro_subtitulo.jpg" />
+      </div>
+      <div class="titulo_texto">
+        <label>CATÁLOGO DE VEHÍCULOS DEV</label>
+      </div>
+      <div class="titulo_botones">
+        <ul>
+          <li>
+            <a class="boton_nuevo" (click)="agregarVehiculo()" >Nuevo</a>
+          </li>
+          <li>
+            <a class="boton_regresar">Regresar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Información de vehículos -->
+    <!-- Filtros -->
+    <div class="cajas">
+      <div class="informativo s1100 flex-wrap-colum">
+        <div class="fila">
+          <div class="size_1-3c">
+            <div class="etiqueta_principal">OPERACIÓN:</div>
+            <div class="datos">
+              <select id="operacion" name="operacion" [(ngModel)]="selectedOper">
+                <option *ngFor="let oper of allOperaciones"  [value]="oper.operacion">
+                  {{ oper.descripcion }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="size_3-7c">
+            <div class="etiqueta_principal">TRANSPORTISTA:</div>
+            <div class="datos">
+              <select id="transportista" name="transportista" [(ngModel)]="selectedTrans">
+                <option *ngFor="let trans of allTransportistas" [value]="trans.code">
+                  {{ trans.nombre }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="size_1-3c">
+            <div class="etiqueta_principal">VEHÍCULO:</div>
+            <div class="datos">
+              <input type="text" id="txtVehiculo" [(ngModel)]="txtVehiculo">
+            </div>
+          </div>
+          <div class="size_1-3c">
+            <div class="etiqueta_principal">ANTENA:</div>
+            <div class="datos">
+              <input type="text" name="txtAntena" [(ngModel)]="txtAntena" >
+            </div>
+          </div>
+          <div class="size_1-3c">
+            <div class="etiqueta_principal">STATUS:</div>
+            <div class="datos">
+              <select [(ngModel)]="selectedStatus">
+                <option>TODOS</option>
+                <option>ACTIVO</option>
+                <option>INACTIVO</option>
+              </select>
+            </div>
+          </div>
+          <div class="size_1-1c">
+            <div class="datos align-self-end">
+              <input type="button" value="Consultar" (click)="consultarVehiculos(false)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Encabezado tabla -->
+    <div class="nombretabla">
+      <div class="nombretabla_texto">
+        <label>INFORMACIÓN DE VEHÍCULOS</label>
+        <div class="paginas">
+          <label class="paginas1"> {{totalVehiculos}} </label>
+          <label class="paginas2">RESULTADOS EN</label>
+          <label class="paginas3"> {{totalPaginas}} </label>
+          <label class="paginas2">PÁGINA(S)</label>
+          <label class="selector">
+            <select [(ngModel)]='selectedPaginas' (ngModelChange)="onChange($event)">
+              <option *ngFor="let pags of allPaginas">
+                {{ pags }}
+              </option>
+             </select>
+          
+          </label>
+          <div class="botonPagA">
+            <img src="../../assets/componentes/b_anterior.png" (click)="pagAnterior()"/>
+          </div>
+          <label class="paginas5"> {{paginaActual}} </label>
+          <div class="botonPagS">
+            <img src="../../assets/componentes/b_siguiente.png" (click)="pagSiguiente()"/>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Tabla -->
+    <div class="table-container table-doble">
+      <table class="scrollTableX">
+        <thead>
+          <tr>
+            <th class="cVoperacion"></th>
+            <th class="cVvehiculo txt-left" hidden>Código</th>
+            <th class="cVdescripcion txt-left" hidden>Operación</th>
+            <th class="cVdescripcion txt-left">Operación Desc</th>
+            <th class="cVvehiculo txt-left">Vehículo</th>
+            <th class="cVdescripcion txt-left">Descripción</th>
+            <th class="cVscac">SCAC</th>
+            <th class="cVtransportista txt-left">Transportista</th>
+            <th class="cVoperador txt-left">Operador</th>
+            <th class="cVplacas">Placas</th>
+            <th class="cVplataforma">Plataforma</th>
+            <th class="cVantena">Antena</th>
+            <th class="cVplataforma">Plataforma 2</th>
+            <th class="cVantena">Antena 2</th>
+            <th class="cVstatus txt-left">Status</th>
+            <th class="cicon">Editar</th>
+            <th class="cicon">Inactivar</th>
+            <th class="cicon">Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculosAux ">
+            <td class="txt-center">
+              <img src="../../assets/logos/trackit.png">
+            </td>
+            <td hidden>
+              <label> {{vehiculo.code}} </label>
+            </td>
+            <td hidden>
+              <label> {{vehiculo.operacion}} </label>
+            </td>
+            <td>
+              <label> {{vehiculo.operacion_desc}} </label>
+            </td>
+            <td>
+              <label> {{vehiculo.vehiculo}} </label>
+            </td>
+            <td>
+              <label>  {{vehiculo.descripcion}}  </label>
+            </td>
+            <td class="txt-center">
+              <label>  {{vehiculo.trans_code}} </label>
+            </td>
+            <td>
+              <label> {{vehiculo.trans_nombre}} </label>
+            </td>
+            <td>
+              <label> {{vehiculo.chofer_nombre}} </label>
+            </td>
+            <td class="txt-center">
+              <label> {{vehiculo.placas}} </label>
+            </td>
+            <td class="txt-center">
+              <label> {{vehiculo.plataforma}} </label>
+            </td>
+            <td class="txt-center">
+              <label> {{vehiculo.antena2}} </label>
+            </td>
+            <td class="txt-center">
+              <label> {{vehiculo.plataforma2}} </label>
+            </td>
+            <td class="txt-center">
+              <label> {{vehiculo.antena2}} </label>
+            </td>
+            <td>
+              <label>  {{vehiculo.status}} </label>
+            </td>
+            <td class="txt-center"  (click)="updateVehiculo(vehiculo.code,vehiculo.operacion)" ><img src="../../assets/componentes/pencil-icon.png" style="cursor:pointer"></td>
+            <td class="txt-center"  (click)="deleteVehiculo(vehiculo.code,vehiculo.operacion)" ><img src="../../assets/componentes/trash-icon.png"  style="cursor:pointer"></td>
+            <td class="txt-center"  (click)="detailVehiculo(vehiculo.code,vehiculo.operacion)" ><img src="../../assets/componentes/detail-icon.png" style="cursor:pointer"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+
+
+  <!--
+  <div class="nombretabla accionesST">
+    <div class="nombretabla_texto">
+      <label>SEGUROS :<span> T99 (41AGAZ)</span></label>
+    </div>
+    <div class="titulo_botones">
+      <ul>
+        <li>
+          <a class="boton_agregar_sub" (click)="agregarVehiculo()">Agregar</a>
+        </li>
+        <li>
+          <a class="boton_guardar_sub">Guardar</a>
+        </li>
+        <li>
+          <a class="boton_cancelar_sub">Cancelar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+   
+  <div class="table-container table-doble">
+    <table class="scrollTableX">
+      <thead>
+        <tr>
+          <th class="cVtipo_seguro txt-left">* Tipo de Seguro</th>
+          <th class="cVaseguradora txt-left">Aseguradora</th>
+          <th class="cVnumero_poliza txt-left">* Número de Póliza</th>
+          <th class="cVfecha_vencimiento">* Fecha de Vencimiento</th>
+          <th class="cVstatus txt-left">Status</th>
+          <th class="cicon">Editar</th>
+          <th class="cicon">Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <select>
+              <option></option>
+            </select>
+          </td>
+          <td>
+            <input type="text" value="GNP">
+          </td>
+          <td>
+            <input type="text" class="txt-right" value="09879">
+          </td>
+          <td>
+            <dp-date-picker [config]="config" ></dp-date-picker>
+          </td>
+          <td>
+            <select>
+              <option></option>
+            </select>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/cancel-icon.png"></a>
+          </td>
+          <td class="txt-center"></td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  -->
+
+</div>
+  
+  

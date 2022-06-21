@@ -1,0 +1,130 @@
+// Contenedores
+
+// General
+body {
+	&.popup {
+		background-color: $primary-text-color;
+		min-height: auto;
+		min-width: 750px;
+		padding: 0;
+	}
+}
+
+// Doble tabla
+.tabla-horizontal {
+	@include display-flex;
+	@include flex-justify-content(center);
+
+	&-elemento {
+		@include flex(1, 1, auto);
+		@include display-flex;
+
+		.reduccion {
+			margin: 15px;
+		}
+	}
+}
+
+// Reducciones
+.reduccion {
+	margin: 15px auto;
+	@include display-flex;
+	@include flex-direction(column);
+}
+
+.sombra {
+	border: 1px solid $gray-complement-1;
+	@include box-shadow(3px, 2px, 4px, 0, $gray-complement-2);
+}
+
+.s350 {
+	width: 350px !important;
+	min-width: 350px !important;	
+}
+
+.s500 {
+	width: 500px !important;
+	min-width: 500px !important;	
+}
+
+.s550 {
+	width: 550px !important;
+	min-width: 550px !important;	
+}
+
+.s600 {
+	width: 600px !important;
+	min-width: 600px !important;	
+}
+
+.s650 {
+	width: 650px !important;
+	min-width: 650px !important;	
+}
+
+.s680 {
+	width: 680px !important;
+	min-width: 680px !important;
+}
+
+.s700 {
+	width: 700px !important;
+	min-width: 700px !important;	
+}
+
+.s800 {
+	width: 800px !important;
+}
+
+.s900 {
+	width: 900px !important;
+}
+
+.s1000 {
+	width: 1000px !important;
+}
+
+.s1100 {
+	width: 1100px !important;
+}
+
+.s1200 {
+	width: 1200px !important;
+}
+
+.s1240 {
+	width: 1240px !important;
+}
+
+.s1250 {
+	width: 1250px !important;
+}
+
+.stotal {
+	width: calc(100% - 28px) !important; 
+
+	.smitad-izq,
+	.smitad-der {
+		width: calc(50% - 8px);
+
+		.sombra {
+			width: 100%;
+		}
+	}
+
+	.smitad-izq {
+		@include display-flex;
+		@include flex-justify-content(flex-start !important);
+		-ms-flex-pack: start !important;
+		margin-right: 8px;
+	}
+
+	.smitad-der {
+		@include display-flex;
+		@include flex-justify-content(flex-end !important);
+		-ms-flex-pack: end !important;
+		margin-left: 8px;
+	}
+}
+
+		

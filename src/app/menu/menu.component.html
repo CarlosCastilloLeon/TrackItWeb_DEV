@@ -1,0 +1,26 @@
+<!-- Menú-->
+<div class="contenedorMenu">
+  <ul class="menu">
+    <li><a href="index.html">INICIO</a></li>
+    <li class="size_catalogos">
+      <a href="">CATÁLOGOS</a>
+      <ul>
+        <li class="has-sub size_catalogos-sistema"><a href="#">Sistema</a>
+          <ul>
+            <li>
+              <a [routerLink]="['/catalogos_sistema_roles-acceso']">Roles / Acceso</a>
+            </li>
+          </ul>
+        </li>
+        <li class="has-sub size_catalogos-transportes"><a href="#">Transportes</a>
+          <ul>
+            <li>
+              <a [routerLink]="['/contenedor-vehiculos']">Vehículos</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">SALIR</a></li>
+  </ul>
+</div>

@@ -1,0 +1,6 @@
+// Menú
+app-menu {	
+	& + .contenido .titulo_seccion {
+		border-top: 1px solid $lighter-color;
+	}	
+}

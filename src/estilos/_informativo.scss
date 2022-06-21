@@ -1,0 +1,681 @@
+//Contenido informativo / Editables / Popups
+.informativo {
+	background-color: $bg-form;
+	width: 100%;
+	font-weight: bold;
+	padding: 0;
+	font-size: 12px;
+	font-weight: 500;
+	border: 3px solid $gray-complement-1;
+
+	&_subtitulo {
+		@include display-flex;
+		@include flex-align-items(center);
+		width: 100%;
+		padding: 15px 0 5px 0;
+
+		label {
+			font-size: 14px;
+			font-weight: 500;
+			margin: 0 15px;
+			text-align: center;
+			@include flex(0,1,auto);
+			color: $nombre-tabla-color;
+		}
+
+		.linea {
+			border-top: 1px solid $bg-informativo;
+			border-bottom: 1px solid $gray-complement-1;
+			@include flex(1,1,auto);
+		}
+	}
+
+	&.editable_individual {
+		margin: 20px auto;
+		background-color: transparent;
+		border: 0;
+
+		&.flex-wrap-colum {
+			.fila {
+				& > div {
+					@include flex-wrap(wrap);
+					padding: 0 3px;
+
+					div {
+						&.etiqueta_principal {
+							width: 100%;
+							text-align: left;
+							margin: 1px 3px;
+						}
+					}
+				}
+
+				.no-wrap {
+					@include flex-wrap(nowrap);
+
+					div {
+						&.etiqueta_principal{
+							text-align: right;
+						}
+					}
+				}
+
+				.datos {
+					label {
+						margin: 6px 10px 2px 8px;
+					}
+				}
+			}
+		}
+
+		.fila {
+			border: 0;
+			padding: 2px 0;
+
+			& > div {
+				border: 0;
+				padding: 2px 5px;
+
+				&.flex-direction-column {
+					padding: 0;
+				}
+			}
+
+			&.flex-wrap-colum {
+				& > div {
+					@include flex-wrap(wrap);
+					padding: 0 3px;
+
+					div {
+						&.etiqueta_principal {
+							width: 100%;
+							text-align: left;
+							margin: 1px 3px;
+						}
+					}
+				}
+			}
+		}
+
+		.nombretabla {
+			margin: 0 0 10px 0;
+
+			.nombretabla_texto {
+				label {
+					@include flex-justify-content(center);
+				}
+			}
+		}
+	}
+
+	&.labelS {	
+		&60 {
+			div {
+				.etiqueta_principal {
+					width: 60px;
+					min-width: 60px;
+				}
+			}
+		}
+
+		&70 {
+			div {
+				.etiqueta_principal {
+					width: 70px;
+					min-width: 70px;
+				}
+			}
+		}
+
+		&75 {
+			div {
+				.etiqueta_principal {
+					width: 75px;
+					min-width: 75px;
+				}
+			}
+		}
+
+		&80 {
+			div {
+				.etiqueta_principal {
+					width: 80px;
+					min-width: 80px;
+				}
+			}
+		}
+
+		&90 {
+			div {
+				.etiqueta_principal {
+					width: 90px;
+					min-width: 90px;
+				}
+			}
+		}
+
+		&95 {
+			div {
+				.etiqueta_principal {
+					width: 95px;
+					min-width: 95px;
+				}
+			}
+		}
+
+		&100 {
+			div {
+				.etiqueta_principal{
+					width: 100px;
+					min-width: 100px;
+				}
+			}
+		}
+
+		&110 {
+			div {
+				.etiqueta_principal {
+					width: 110px;
+					min-width: 110px;
+				}	
+			}
+		}
+
+		&115 {
+			div {
+				.etiqueta_principal {
+					width: 115px;
+					min-width: 115px;
+				}	
+			}
+		}
+
+		&120 {
+			div {
+				.etiqueta_principal {
+					width: 120px;
+					min-width: 120px;
+				}		
+			}
+		}
+
+		&130 {
+			div {
+				.etiqueta_principal {
+					width: 130px;
+					min-width: 130px;
+				}	
+			}
+		}
+
+		&135 {
+			div {
+				.etiqueta_principal {
+					width: 135px;
+					min-width: 135px;
+				}	
+			}
+		}
+
+		&140 {
+			div {
+				.etiqueta_principal {
+					width: 140px;
+					min-width: 140px;
+				}	
+			}
+		}
+
+		&145 {
+			div {
+				.etiqueta_principal {
+					width: 145px;
+					min-width: 145px;
+				}	
+			}
+		}
+
+		&150 {
+			div {
+				.etiqueta_principal {
+					width: 150px;
+					min-width: 150px;
+				}	
+			}
+		}
+
+		&160 {
+			div {
+				.etiqueta_principal {
+					width: 160px;
+					min-width: 160px;
+				}		
+			}
+		}
+	}
+
+	.fila {
+		@include display-flex;
+		width: 100%;
+		border-bottom: 1px solid $gray-complement-2;
+
+		&:last-child {
+			border-bottom: 0;	
+		}
+
+		& > div {
+			@include display-flex;
+			@include flex-align-items(center);
+			padding: 3px 5px;
+			border-right: 1px solid $gray-complement-2;
+
+			&:last-child {
+				border-right: 0;
+			}
+
+			div {
+				&.etiqueta_principal {
+					margin: 2px 7px 1px 10px;
+					@include flex(0, 1, auto);
+					text-align: right;
+					white-space: nowrap;
+				}
+			}
+
+			.datos {
+				@include flex(1, 1, auto);
+				@include display-flex;
+				font-weight: normal;
+
+				input[type="radio"] {
+					position: relative;
+					top: -1px;
+				}
+
+				label {
+					margin: 5px 10px 3px 8px;
+					text-align: right;
+				}
+
+				.lov {
+					@include display-flex;
+
+					a {
+						@include display-flex;
+						@include flex( 0, 1, auto);
+						@include flex-align-items(center);
+						cursor: pointer;
+
+						img {
+							height: 18px;
+							width: auto;
+							@include transition(opacity .2s);
+						}
+
+						&:hover {
+							img {
+								opacity: .8;
+							}
+						}
+					}
+
+					input[type="text"] + a {
+						margin-left: 5px;
+					}
+				}
+			}
+
+			&.size {
+				&_total-flex {
+					@include flex(1, 1, auto);
+				}
+					
+				&_0-3c {
+					width: 3%;
+					min-width: 3%;
+				}
+
+				&_0-4c {
+					width: 4%;
+					min-width: 4%;
+				}
+
+				&_0-5c {
+					width: 5%;
+					min-width: 5%;
+				}
+
+				&_0-6c {
+					width: 6%;
+					min-width: 6%;
+				}
+
+				&_0-7c {
+					width: 7%;
+					min-width: 7%;
+				}
+
+				&_0-8c {
+					width: 8%;
+					min-width: 8%;
+				}
+
+				&_0-9c {
+					width: 9%;
+					min-width: 9%;
+				}
+
+				&_1c {
+					width: 10%;
+					min-width: 10%;
+				}
+
+				&_1-1c {
+					width: 11%;
+					min-width: 11%;
+				}
+
+				&_1-2c {
+					width: 12%;
+					min-width: 12%;
+				}
+
+				&_1-3c {
+					width: 13%;
+					min-width: 13%;
+				}
+
+				&_1-4c {
+					width: 14%;
+					min-width: 14%;
+				}
+
+				&_1-5c {
+					width: 15%;
+					min-width: 15%;
+				}
+
+				&_1-6c {
+					width: 16%;
+					min-width: 16%;
+				}
+
+				&_1-7c {
+					width: 17%;
+					min-width: 17%;
+				}
+
+				&_1-8c {
+					width: 18%;
+					min-width: 18%;
+				}
+
+				&_1-9c {
+					width: 19%;
+					min-width: 19%;
+				}
+
+				&_2c {
+					width: 20%;
+					min-width: 20%;
+				}
+
+				&_2-1c {
+					width: 21%;
+					min-width: 21%;
+				}
+
+				&_2-2c {
+					width: 22%;
+					min-width: 22%;
+				}
+
+				&_2-3c {
+					width: 23%;
+					min-width: 23%;
+				}
+
+				&_2-4c {
+					width: 24%;
+					min-width: 24%;
+				}
+
+				&_2-5c {
+					width: 25%;
+					min-width: 25%;
+				}
+
+				&_2-7c {
+					width: 27%;
+					min-width: 27%;
+				}
+
+				&_2-8c {
+					width: 28%;
+					min-width: 28%;
+				}
+
+				&_2-9c {
+					width: 29%;
+					min-width: 29%;
+				}
+
+				&_3c {
+					width: 30%;
+					min-width: 30%;
+				}
+
+				&_3-1c {
+					width: 31%;
+					min-width: 31%;
+				}
+
+				&_3-2c {
+					width: 32%;
+					min-width: 32%;
+				}
+
+				&_3-3c {
+					width: 33%;
+					min-width: 33%;
+				}
+
+				&_3-4c {
+					width: 34%;
+					min-width: 34%;
+				}
+
+				&_3-5c {
+					width: 35%;
+					min-width: 35%;
+				}
+
+				&_3-6c {
+					width: 36%;
+					min-width: 36%;
+				}
+				
+				&_3-7c {
+					width: 37%;
+					min-width: 37%;
+				}
+
+				&_3-8c {
+					width: 38%;
+					min-width: 38%;
+				}
+
+				&_3-9c {
+					width: 39%;
+					min-width: 39%;
+				}
+
+				&_4c {
+					width: 40%;
+					min-width: 40%;
+				}
+
+				&_4-1c {
+					width: 41%;
+					min-width: 41%;
+				}
+
+				&_4-2c {
+					width: 42%;
+					min-width: 42%;
+				}
+
+				&_4-3c {
+					width: 43%;
+					min-width: 43%;
+				}
+
+				&_4-4c {
+					width: 44%;
+					min-width: 44%;
+				}
+
+				&_4-5c {
+					width: 45%;
+					min-width: 45%;
+				}
+
+				&_4-6c {
+					width: 46%;
+					min-width: 46%;
+				}
+
+				&_4-7c {
+					width: 47%;
+					min-width: 47%;
+				}
+
+				&_4-8c {
+					width: 48%;
+					min-width: 48%;
+				}
+
+				&_5c {
+					width: 50%;
+					min-width: 50%;
+				}
+
+				&_5-1c {
+					width: 51%;
+					min-width: 51%;
+				}
+
+				&_5-2c {
+					width: 52%;
+					min-width: 52%;
+				}
+
+				&_5-3c {
+					width: 53%;
+					min-width: 53%;
+				}
+
+				&_5-4c {
+					width: 54%;
+					min-width: 54%;
+				}
+
+				&_5-5c {
+					width: 55%;
+					min-width: 55%;
+				}
+
+				&_5-6c {
+					width: 56%;
+					min-width: 56%;
+				}
+
+				&_5-8c {
+					width: 58%;
+					min-width: 58%;
+				}
+
+				&_6c {
+					width: 60%;
+					min-width: 60%;
+				}	
+
+				&_6-2c {
+					width: 62%;
+					min-width: 62%;
+				}	
+
+				&_6-3c {
+					width: 63%;
+					min-width: 63%;
+				}	
+
+				&_6-5c {
+					width: 65%;
+					min-width: 65%;
+				}	
+
+				&_6-6c {
+					width: 66%;
+					min-width: 66%;
+				}	
+
+				&_6-7c {
+					width: 67%;
+					min-width: 67%;
+				}	
+
+				&_6-9c {
+					width: 69%;
+					min-width: 69%;
+				}	
+
+				&_7c {
+					width: 70%;
+					min-width: 70%;
+				}	
+
+				&_7-5c {
+					width: 75%;
+					min-width: 75%;
+				}	
+
+				&_7-8c {
+					width: 78%;
+					min-width: 78%;
+				}	
+			
+				&_8c {
+					width: 80%;
+					min-width: 80%;
+				}
+
+				&_8-1c {
+					width: 81%;
+					min-width: 81%;
+				}
+
+				&_8-5c {
+					width: 85%;
+					min-width: 85%;
+				}
+
+				&_8-7c {
+					width: 87%;
+					min-width: 87%;
+				}
+
+				&_9c {
+					width: 90%;
+					min-width: 90%;
+				}
+
+				&_10c {
+					width: 100%;
+					min-width: 100%;
+				}
+			}
+		}
+	}
+}
+

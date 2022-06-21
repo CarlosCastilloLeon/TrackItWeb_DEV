@@ -1,0 +1,51 @@
+// Estilos generales
+@import "../../estilos/variables";
+@import "../../estilos/mixins";
+
+// Pie
+.pie {
+	height: 35px;
+	background-color: $bg-footer;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+	z-index: 10;
+	font-weight: bold;
+	@include display-flex;
+	@include flex-align-items(center);
+	min-width: $min-resolution-w;
+}
+
+.fecha_hora,
+.user {
+	font-size: 17px;
+	padding-left: 15px;
+	width: auto;
+	@include flex(0,1,auto);
+	color: $lighter-color;
+	text-align: left;
+
+	span {
+		font-size: 14px;
+	}
+}
+
+.fecha_hora {
+	@include flex(1,1,auto);
+}
+
+.fecha_pie,
+.hora,
+.segundos {
+	display: inline;
+}
+
+.segundos {
+	font-size: 12px;
+}
+
+.user {
+	padding-right: 15px;
+	text-align: right;
+}

@@ -1,0 +1,95 @@
+// Botones de acción
+.titulo_botones {
+	font-size: 13px;	
+
+	ul {
+		margin: 0;
+		padding: 0;
+		@include display-flex;
+
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			border-style: solid;
+			border-width: 0 0 0 1px;
+			border-color: $border-color-light;
+			background-image: url(../assets/componentes/barra_botones.jpg);
+
+			a {
+				display: block;
+				padding: 0 10px 0 33px;
+				font-weight: 500;
+				text-decoration: none;
+				color: $lighter-color;
+				text-transform: uppercase;
+
+				&:hover {
+					text-decoration: underline
+				}
+			}
+		}
+	}
+}
+
+.boton {
+	&_agregar_sub,
+	&_cancelar,
+	&_cancelar_sub,
+	&_cerrar,	
+	&_confirmar,	
+	&_guardar,
+	&_guardar_sub,	
+	&_nuevo,	
+	&_regresar {
+		background-repeat: no-repeat;
+		background-position: 1px 1px;
+		cursor: pointer;
+	}
+
+	&_agregar_sub {
+		background-position: 7px 2px;
+		background-image: url(../assets/botones/boton_agregar_sub.png);
+	}	
+
+	&_cancelar {
+		background-image: url(../assets/botones/boton_cancelar.png);
+	}
+
+	&_cancelar_sub {
+		background-position: 7px 2px;
+		padding: 1px 10px 0 32px !important;
+		background-image: url(../assets/botones/boton_cancelar_sub.png);
+	}
+
+	&_cerrar {
+		background-image: url(../assets/botones/boton_cerrar.png);
+	}
+
+	&_confirmar {
+		background-image: url(../assets/botones/boton_confirmar.png);
+	}
+
+	&_guardar {
+		background-image: url(../assets/botones/boton_guardar.png)
+	}
+
+	&_guardar_sub {
+		background-position: 7px 2px;
+		background-image: url(../assets/botones/boton_guardar_sub.png);
+	}
+
+	&_nuevo {
+		background-image: url(../assets/botones/boton_nuevo.png)
+	}
+
+	&_regresar {
+		background-image: url(../assets/botones/boton_regresar.png)
+	}
+}
+
+
+
+
+
+

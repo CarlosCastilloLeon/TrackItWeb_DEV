@@ -1,0 +1,96 @@
+// Mixins
+
+// Flex
+@mixin display-flex { 
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-direction($direction) {
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+@mixin flex($grow, $shrink, $basis) {
+	-webkit-flex: $grow $shrink $basis;
+	-ms-flex: $grow $shrink $basis;
+	flex: $grow $shrink $basis;
+}
+
+@mixin flex-justify-content($justify) {
+	-webkit-justify-content: $justify;
+	-ms-flex-pack: $justify;
+	justify-content: $justify;
+}
+
+@mixin flex-align-items($align-items) {
+	-webkit-align-items: $align-items;
+	-ms-flex-align: $align-items;
+	align-items: $align-items;
+}
+
+@mixin flex-align-content($align-content) {
+	-webkit-align-content: $align-content;
+	-ms-flex-line-pack: $align-content;
+	align-content: $align-content;
+}
+
+@mixin flex-align-self($align-self) {
+	-webkit-align-self: $align-self;
+	-ms-flex-item-align: $align-self;
+	align-self: $align-self;
+}
+
+// Sombra
+@mixin box-shadow($top, $left, $blur, $size, $color) {
+	-webkit-box-shadow:  $top $left $blur $size $color;
+	-moz-box-shadow: $top $left $blur $size $color;
+	box-shadow: $top $left $blur $size $color;
+}
+
+// Sombra interna
+@mixin box-shadow-inset($top, $left, $blur, $size, $color) {
+	-webkit-box-shadow:  inset $top $left $blur $size $color;
+	-moz-box-shadow: inset $top $left $blur $size $color;
+	box-shadow: inset $top $left $blur $size $color;
+}
+
+// Appearance
+@mixin appearance($appearance) {
+	appearance: $appearance !important;
+	-webkit-appearance: $appearance !important;
+	-moz-appearance: $appearance !important;
+}
+
+// Border redondeados
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	-o-border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+// Transform
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Animation
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}

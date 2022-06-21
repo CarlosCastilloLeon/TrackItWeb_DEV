@@ -1,0 +1,11 @@
+// Popups
+body {
+	&.popup {
+		.contenido {
+			@include display-flex;
+			@include flex-direction(column);
+			height: 100vh;
+			min-height: 500px;
+		}
+	}
+}

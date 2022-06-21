@@ -1,0 +1,18 @@
+// General
+body {
+	margin: 0 auto;
+	background: $bg-form;
+	min-width: $min-resolution-w;
+	min-height: $min-resolution-h;
+	font-family: $primary-font-stack;
+	font-weight: normal;
+	color: $primary-text-color;
+	font-size: x-small;
+	padding: 0;
+	box-sizing: border-box;
+	padding: 0 0 35px 0;
+
+	* {
+		box-sizing: border-box;
+	}
+}

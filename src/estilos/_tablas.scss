@@ -1,0 +1,169 @@
+// Tablas
+.table-container {
+	overflow-x: auto;	
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: 0;
+	background-color: $lighter-color;
+	@include flex(1, 1, auto);
+}
+
+.scrollTableX {
+	border-bottom: 1px solid $gray-complement-2;
+	background-color: $bg-table;
+	overflow-x: auto;
+	overflow-y: auto;
+	border-spacing: 0;
+	width: 100%;
+
+	table {
+		border-collapse: collapse;
+		margin: 0;
+		padding: 0;
+	}
+
+	thead {
+		border-collapse: collapse;
+
+		th {
+			height: 31px;
+			border-width: 0 0 0 1px;
+			border-style: solid;
+			border-color: $lighter-color;
+			background-color: $corporative-color-1;
+			padding: 0 7px;
+			color: $lighter-color;
+			font-weight: 500;
+			font-size: 12px;
+			text-align: left;
+			position: sticky;
+			top: 0;
+			z-index: 1;
+			text-align: center;
+
+			&:first-child {
+				border-width: 0 0 0 0;
+			}
+
+			&.cicon {
+				width: 55px;
+				min-width: 55px;
+			}
+
+			&.ccheck {
+				width: 41px;
+				min-width: 41px;
+				text-align: center !important;
+
+				input {
+					&[type="checkbox"] {
+						& + label {
+							&:before {
+								margin-right: 1px;
+							}
+						}
+					}
+				}
+			}
+			
+			&.ccheck_texto {
+				input {
+					&[type="checkbox"] {
+						& + label {
+							&:before {
+								margin-right: 3px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			border: 1px solid $gray-complement-1;
+			border-width: 0 0 1px 0;
+
+			td {
+				border: 1px solid $gray-complement-1;
+				border-width: 0 1px 0 0;
+				border-collapse: collapse;
+				color: $primary-text-color;
+				font-size: 11px;
+				padding: 2px 4px;
+				@include transition(background-color .15s);
+
+				img {
+					position: relative;
+					height: 16px;
+					top: 2px;
+					border: 0;
+					width: auto;
+				}
+
+				a {
+					img {
+						cursor: pointer;
+						@include transition (opacity .1s);
+					}
+						
+					&:hover {
+						img {
+							opacity: .7								
+						}
+					}
+				}
+
+				input,
+				select {
+					font-size: 11px;
+					height: 20px;
+				}
+
+				input[type="checkbox"] + label:before {
+					margin-right: 0;
+				}
+
+				input[type="radio"] + label {
+					padding: 0;
+					
+					&:before {
+						margin-right: 0;
+					}
+				}
+			}				
+
+			&.selected {
+				td {
+					background-color: $bg-table-selected !important;
+				}
+			}
+
+			&:nth-child(even) {
+				&:hover {
+					td {
+						background-color: $bg-table-hover;
+					}
+				}
+
+				td {
+					background: $lighter-color;
+				}
+			}
+
+			&:nth-child(odd) {
+				&:hover {
+					td {
+						background-color: $bg-table-hover;
+					}
+				}
+
+				td {
+					background: $bg-table-odd;
+				}
+			}
+		}
+	}
+}

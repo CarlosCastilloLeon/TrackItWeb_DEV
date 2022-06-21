@@ -1,0 +1,40 @@
+// Subsecciones
+.titulo_seccion {
+	height: 23px;
+	min-height: 23px;
+	line-height: 23px;
+	background-repeat: repeat-x;
+	text-transform: uppercase;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 500;
+	background: $bg-footer url(../assets/componentes/barra_subtitulo.jpg);
+	@include box-shadow(0, 1px, 7px, 0, $shadow-color);
+	@include display-flex;
+
+	.titulo_cuadro {
+		float: left;
+		margin-right: 15px;
+		@include flex(0, 1, auto);
+	}
+
+	.titulo_texto {
+		float: left;
+		width: auto;
+		color: $lighter-color;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 500;
+		@include flex(1, 1, auto);
+	}
+
+	& + .nombretabla {
+		border-top: 1px solid $gray-complement-1;
+	}
+}
+
+.popup {
+	.titulo_seccion {
+		background: $primary-text-color url(../assets/componentes/barra_negro.jpg);
+	}
+}

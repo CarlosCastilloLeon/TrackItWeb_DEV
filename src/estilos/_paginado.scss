@@ -1,0 +1,52 @@
+// PÁGINAS
+.paginas {
+	font-weight: bold;
+	color: $lighter-color;
+	padding-right: 12px;
+	@include display-flex;
+	@include flex-align-items(flex-end);
+	-ms-flex-align: end;
+
+	.paginas1,
+	.paginas3,
+	.paginas5 {
+		font-size: 17px;
+		margin: 0 8px;
+	}
+
+	.paginas2,
+	.paginas4 {
+		font-size: 13px;
+		margin: 0 0 1px 0;
+	}
+
+	.selector {
+		margin: 0 10px
+	}
+
+	select {
+		font-size: 13px;
+		width: 150px;
+		margin: 0;
+		text-transform: none;
+		height: 20px;
+	}
+
+	img {
+		height: 18px;
+		@include transition(opacity 0.1s);
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+
+.botonPagA,
+.botonPagS {
+	top: -1px;
+	position: relative;
+	height: 18px;
+	cursor: pointer;
+	background-color: $lighter-color;
+}

@@ -1,0 +1,372 @@
+<!-- Encabezado -->
+<app-encabezado></app-encabezado>
+<!-- Menú -->
+<app-menu></app-menu>
+<!-- Contenido -->
+<div class="contenido">
+  <!-- Título -->
+  <div class="titulo_seccion">
+    <div class="titulo_cuadro">
+      <img src="../../assets/componentes/cuadro_subtitulo.jpg" />
+    </div>
+    <div class="titulo_texto">
+      <label>CATÁLOGO DE ROLES / ACCESO</label>
+    </div>
+    <div class="titulo_botones">
+      <ul>
+        <li>
+          <a class="boton_nuevo">Nuevo</a>
+        </li>
+        <li>
+          <a class="boton_nuevo">Guardar</a>
+        </li>
+        <li>
+          <a class="boton_regresar">Regresar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Información de roles -->
+  <div class="reduccion reduccion-doble s900 sombra ">
+    <!-- Filtros -->
+    <div class="cajas">
+      <div class="informativo">
+        <div class="fila justify-center">
+          <div class="size_auto">
+            <div class="etiqueta_principal">DESCRIPCIÓN:</div>
+            <div class="datos size_200">
+              <input type="text">
+            </div>
+          </div>
+          <div class="size_auto">
+            <div class="datos">
+              <input type="button" value="Buscar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Encabezado tabla -->
+    <div class="nombretabla">
+      <div class="nombretabla_texto">
+        <label>INFORMACIÓN DE ROLES</label>
+        <div class="paginas">
+          <label class="paginas1">999</label>
+          <label class="paginas2">RESULTADOS EN</label>
+          <label class="paginas3">999</label>
+          <label class="paginas2">PÁGINA(S)</label>
+          <label class="selector">
+            <select>
+              <option>Páginas 1 de 999</option>
+              <option>Páginas 999 de 999</option>
+            </select>
+          </label>
+          <div class="botonPagA">
+            <img src="../../assets/componentes/b_anterior.png" />
+          </div>
+          <label class="paginas5">999</label>
+          <div class="botonPagS">
+            <img src="../../assets/componentes/b_siguiente.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tabla -->
+    <div class="table-container">
+      <table class="scrollTableX">
+        <thead>
+          <tr>
+            <th class="cRAclave">Clave</th>
+            <th class="cRAdescripcion txt-left">Descripción</th>
+            <th class="cRAacceso_web">Acceso Web</th>
+            <th class="cicon">Editar</th>
+            <th class="cicon">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" class="txt-center" value="A" disabled="disabled">
+            </td>
+            <td>
+              <input type="text" value="ADMINISTRADOR GENERAL">
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/cancel-icon.png"></a>
+            </td>
+            <td class="txt-center"></td>
+            <td class="txt-center"></td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>X</label>
+            </td>
+            <td>
+              <label>COMUNICACIONES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>C</label>
+            </td>
+            <td>
+              <label>CUSTODIA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>E</label>
+            </td>
+            <td>
+              <label>EMBARQUES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>M</label>
+            </td>
+            <td>
+              <label>MONITORISTA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">N/A</td>
+            <td class="txt-center">N/A</td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>T</label>
+            </td>
+            <td>
+              <label>TRANSPORTISTA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>W</label>
+            </td>
+            <td>
+              <label>WLXCO</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>X</label>
+            </td>
+            <td>
+              <label>COMUNICACIONES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>C</label>
+            </td>
+            <td>
+              <label>CUSTODIA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr class="selected">
+            <td class="txt-center">
+              <label>E</label>
+            </td>
+            <td>
+              <label>EMBARQUES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>M</label>
+            </td>
+            <td>
+              <label>MONITORISTA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">N/A</td>
+            <td class="txt-center">N/A</td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>T</label>
+            </td>
+            <td>
+              <label>TRANSPORTISTA</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td class="txt-center">
+              <label>W</label>
+            </td>
+            <td>
+              <label>WLXCO</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/detail-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Detalles -->
+  <div class="reduccion reduccion-doble s900 sombra">
+    <!-- Encabezado tabla -->
+    <div class="nombretabla accionesST">
+      <div class="nombretabla_texto">
+        <label>DETALLES :<span> EMBARQUES</span></label>
+      </div>
+      <div class="titulo_botones">
+        <ul>
+          <li>
+            <a class="boton_agregar_sub" (click)="agregarAccesos()">Agregar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Tabla -->
+    <div class="table-container">
+      <table class="scrollTableX">
+        <thead>
+          <tr>
+            <th class="cRAmenuRaiz">Menú Raíz</th>
+            <th class="cRAformaWeb">Forma Web</th>
+            <th class="cicon">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>SISTEMA</label>
+            </td>
+            <td>
+              <label>PERFILES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label>ROLES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>CATÁLOGOS</label>
+            </td>
+            <td>
+              <label>USUARIOS</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label>OPERADORES</label>
+            </td>
+            <td class="txt-center">
+              <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Pie -->
+<app-pie></app-pie>

@@ -1,0 +1,147 @@
+// Datepicker
+dp-date-picker {
+	width: 100%;
+	cursor: pointer;
+	font-family: $primary-font-stack;
+
+	.dp-input-container {
+		background-image: url(../assets/componentes/calendario.png);
+		background-repeat: no-repeat;
+		background-position: center right;
+		background-size: 18px auto;
+
+		input {
+			width: calc(100% - 21px);
+			cursor: pointer;
+			text-align: center;
+		}
+	}
+}
+
+.dp-popup {
+	padding: 3px;
+	@include border-radius(3px, 3px, 3px, 3px);
+	background-color: $lighter-color;
+	border-left: 1px solid rgba($border-disabled, 1) !important;
+    border-right: 1px solid rgba($border-disabled, 1) !important;
+    border-bottom: 1px solid rgba($border-disabled, 1) !important;
+
+	dp-calendar-nav { 
+		font-family: $primary-font-stack;		
+
+		.dp-calendar-nav-container {
+			border: 0;
+			height: 32px;
+			background-color: $corporative-color-1;
+
+		}
+
+		.dp-nav-header-btn {
+			background-color: transparent;
+			color: $lighter-color;
+			font-family: $primary-font-stack;
+			font-size: 14px;
+			font-weight: 700;
+			border: 0;
+			@include border-radius(3px, 3px, 3px, 3px);
+			padding: 4px 15px;
+			@include transition(background-color .2s);
+
+			&:hover {
+				background-color: $corporative-color-3;
+			}
+		}
+
+		.dp-calendar-nav-left, 
+		.dp-calendar-nav-right {
+			background-color: transparent;
+			color: $lighter-color;
+			width: 22px;
+			padding: 8px 1px 8px 5px;
+			border: 0;
+			@include border-radius(3px, 3px, 3px, 3px);
+			@include transition(background-color .2s);
+			margin: 0 4px 0 0;
+
+			&:hover {
+				background-color: $corporative-color-3;
+			}
+
+		}
+
+		.dp-calendar-nav-right{
+			padding: 10px 5px 10px 1px;
+			margin: 0 0 0 4px;
+		}
+
+		.dp-current-location-btn {
+			background: transparent;
+			border: 1px solid transparent;
+			@include transition(background .2s);
+
+			&:hover{
+				background: $corporative-color-3;
+			}
+		}
+
+	}
+
+	dp-day-calendar {
+		.dp-calendar-wrapper {
+			border: 0;
+			margin-top: 3px;
+
+			.dp-calendar-weekday {
+				font-weight: 700;
+				font-size: 12px;
+				border: 0;
+				padding: 5px 6px 0 6px;
+				width: auto;
+				margin: 0 2px;
+			}
+
+			.dp-calendar-day {
+				padding: 4px 6px;
+				width: auto;
+				height: auto;
+				font-size: 13px;
+				border: 0;
+				margin: 2px;
+				background-color: transparent;
+				color: $bg-footer;
+				@include transition(background-color .2s);
+
+				&.dp-current-day {
+					color: $corporative-color-1;
+					font-weight: 700;
+				}
+
+				&.dp-selected {
+					background-color: $bg-table-selected;
+				}
+
+				&:hover{ 
+					background-color: $bg-filter;
+				}
+			}
+
+			.dp-calendar-month {
+				font-size: 13px;
+				border: 0;
+				background-color: transparent;
+				color: $bg-footer;
+				@include transition(background-color .2s);
+				
+				&.dp-current-month {
+					color: $corporative-color-1;
+					font-weight: 700;
+				}
+
+				&:hover{ 
+					background-color: $bg-filter;
+				}
+			}
+		}
+	}
+}
+

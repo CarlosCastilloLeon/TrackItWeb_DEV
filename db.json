@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "getOperaciones":
+    [
+        {"operacion":"S","cliente_Cm":1,"descripcion":"CCMSA SLP","nombre_Corto":"SLP","status":"E"},
+        {"operacion":"C","cliente_Cm":1,"descripcion":"CDNI","nombre_Corto":"CDNI","status":"E"},
+        {"operacion":"M","cliente_Cm":1,"descripcion":"MAGNEKON","nombre_Corto":"MKN","status":"E"},
+        {"operacion":"V","cliente_Cm":1,"descripcion":"CMSA ","nombre_Corto":"VKL","status":"E"},
+        {"operacion":"E","cliente_Cm":1,"descripcion":"SOLOG MTY","nombre_Corto":"SMTY","status":"E"},
+        {"operacion":"L","cliente_Cm":1,"descripcion":"ELETEC-SLP","nombre_Corto":"ESLP","status":"D"},
+        {"operacion":"K","cliente_Cm":1,"descripcion":"VIALUTEK","nombre_Corto":"VIA","status":"E"},
+        {"operacion":"P","cliente_Cm":1,"descripcion":"ELETEC PBA","nombre_Corto":"PBA","status":"E"},
+        {"operacion":"B","cliente_Cm":1,"descripcion":"CDNI-NOG","nombre_Corto":"CDN","status":"D"},
+        {"operacion":"O","cliente_Cm":1,"descripcion":"MATERIA PRIMA","nombre_Corto":"MP","status":"E"},
+        {"operacion":"Y","cliente_Cm":1,"descripcion":"SOLOG CDMX","nombre_Corto":"CDMX","status":"E"}
+    ],
+  "getTransportistas":
+    [{"code":"HERC","operacion":"E","celular":null,"ciudad":"NUEVO LAREDO","colonia":null,"cp":null,"direccion":"LOS PILOTOS 633, LA PAZ","email":"g_operaciones@autoexpresshercules.com.mx","estado":"TAM","nextel":null,"nombre":"HERCULES","status":"E","telefono":"89980520"},
+     {"code":"VIAK","operacion":"E","celular":"8120404736","ciudad":"SAN NICOLÁS DE LOS GARZA","colonia":null,"cp":"66470","direccion":"AV. ADOLFO LÓPEZ MATEOS NO. 6263 NTE, COL. LAGRANGE","email":"erik.alvarado@solog.mx","estado":"NL","nextel":"8120404736","nombre":"VIAKABLE","status":"E","telefono":"8120404736"},
+     {"code":"PENA","operacion":"E","celular":null,"ciudad":"SANTIAGO","colonia":null,"cp":null,"direccion":"ADOLFO LOPEZ MATEOS 706 COL. SAN PEDRO EL ALAMO, SANTIAGO N.L.","email":"ruperpena@gmail.com","estado":"NL","nextel":null,"nombre":"TRANSPORTES PEÑA","status":"E","telefono":null},
+     {"code":"TRO","operacion":"E","celular":"8442772997","ciudad":"ARTEAGA","colonia":null,"cp":"25354","direccion":"BLVD FUNDADORES #1053, ARTEAGA, COAHUILA, MEXICO","email":"SEGUIDOR1@TROSERVICIOS.COM.MX","estado":"COA","nextel":"8442772997","nombre":"TRO","status":"E","telefono":"8442772997"},
+     {"code":"ORCA","operacion":"E","celular":null,"ciudad":"SAN NICOLÁS DE LOS GARZA","colonia":null,"cp":null,"direccion":"SANTIAGO TAPIA 205, CENTRO, SAN NICOLAS","email":"AUTOTRANSPORTESORCA31@GMAIL.COM","estado":"NL","nextel":null,"nombre":"AUTOTRANSPORTES ORCA","status":"E","telefono":null},
+     {"code":"MILA","operacion":"E","celular":null,"ciudad":"CELAYA","colonia":null,"cp":null,"direccion":"CARRETERA CELAYA - SALAMANCA, EL GRECO KILOMETRO 5.8","email":"MCOLUNGA@MILAC.COM.MX","estado":"GTO","nextel":null,"nombre":"MILAC","status":"E","telefono":"4616188920"},
+     {"code":"MEGA","operacion":"E","celular":null,"ciudad":"MONTERREY","colonia":null,"cp":null,"direccion":"EAGLE PASS 315, PUERTE DEL NTE RESIDENCIAL","email":"ARNULFO.MEJIA@LOGISTICAMEGA.COM","estado":"NL","nextel":null,"nombre":"MEGALOGISTIC","status":"E","telefono":"8186329963"},
+     {"code":"ABC","operacion":"E","celular":null,"ciudad":"ARTEAGA","colonia":null,"cp":null,"direccion":"ACCESO 1013, PRESA DE LAS CASAS","email":"SEGUIMIENTO@ABCAUTOLINEAS.COM","estado":"COA","nextel":null,"nombre":"ABC AUTOLINEAS","status":"E","telefono":"8441003125"},
+     {"code":"TORO","operacion":"E","celular":"4443757590","ciudad":"SAN LUIS POTOSÍ","colonia":null,"cp":null,"direccion":"NOCHE BUENA 141, JARDINES DEL SUR","email":"REYNATORO42@HOTMAIL.COM","estado":"SLP","nextel":null,"nombre":"REYNA TORO","status":"E","telefono":"4443757590"},{"code":"ETN","operacion":"E","celular":"8112445087","ciudad":"MONTERREY","colonia":null,"cp":null,"direccion":"ADOLFO LOPEZ MATEOS 350, VILLAS DE SANTO DOMINGO","email":"MARCOANTONIO_1969@HOTMAIL.COM","estado":"NL","nextel":null,"nombre":"ENVIOS TERRESTRES NACIONALES","status":"E","telefono":null},{"code":"TFN","operacion":"E","celular":null,"ciudad":"SAN NICOLÁS DE LOS GARZA","colonia":null,"cp":null,"direccion":"ADOLFO LOPEZ MATEOS 350 VILLAS DE SANTO DOMINGO","email":"MARCOANTONIO_1969@HOTMAIL.COM","estado":"NL","nextel":null,"nombre":"TRANSPORTES Y FLETES NACIONALES","status":"E","telefono":"8112445087"},{"code":"EXTN","operacion":"E","celular":"8112445087","ciudad":"SAN NICOLÁS DE LOS GARZA","colonia":null,"cp":null,"direccion":"ADOLFO LOPEZ MATEOS 350, VILLAS DE SANTO DOMINGO","email":"MARCOANTONIO_1969@HOTMAIL.COM","estado":"NL","nextel":null,"nombre":"EXPRESS TRANSPORT NATIONAL","status":"E","telefono":null},{"code":"SOGA","operacion":"E","celular":"8115250211","ciudad":"MONTERREY","colonia":null,"cp":null,"direccion":"LIMON 1403, MODERNA","email":"TRANSPORTESSOGA@HOTMAIL.COM","estado":"NL","nextel":null,"nombre":"SOGA","status":"E","telefono":null},{"code":"HR","operacion":"E","celular":null,"ciudad":"APODACA","colonia":null,"cp":null,"direccion":"CAMINO A STA ROSA 318, SANTA ROSA","email":null,"estado":"NL","nextel":null,"nombre":"H&R","status":"D","telefono":"8119115791"},{"code":"ZAGA","operacion":"E","celular":"8113183773","ciudad":"APODACA","colonia":null,"cp":null,"direccion":"MARIANO MATAMOROS 703, CENTRO","email":"ZAGA_TRANSPORTES@HOTMAIL.COM","estado":"NL","nextel":null,"nombre":"ZAGA","status":"E","telefono":"8113183773"},{"code":"EXSP","operacion":"E","celular":null,"ciudad":"SAN NICOLAS","colonia":null,"cp":null,"direccion":"ANTIGUO CAMINO A APODACA 403, CONSTITUYENTES DE QUERETARO","email":"pegs20@hotmail.com","estado":"NL","nextel":null,"nombre":"EXPRESS SAN PABLO","status":"E","telefono":"8182525665"},{"code":"JAVR","operacion":"E","celular":null,"ciudad":null,"colonia":null,"cp":null,"direccion":"LAGO DE VIESCA 204, DEL LAGO","email":"trans.expressvillarreal@gmail.com","estado":"NL","nextel":null,"nombre":"EXPRESS VILLARREAL","status":"E","telefono":"8181890077"},{"code":"LOAD","operacion":"E","celular":null,"ciudad":"ESCOBEDO","colonia":null,"cp":null,"direccion":"JOSE MARIA MORELOS Y PAVON #107-B, COL. LOS ALTOS","email":"eduardowillis@loadmex.com","estado":"NL","nextel":null,"nombre":"LOADMEX","status":"D","telefono":"8183960868"}
+    ],
+    "getVehiculos":
+    [
+      {"code":"3215",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (PS7381A)",	"descripcion":"S/N (PS7381A)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"PS7381A",	"plataforma":"",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"6884",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (PZ6494A)",	"descripcion":"S/N (PZ6494A)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"PZ6494A",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"2697",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (01AJ2E)",	"descripcion":"S/N (01AJ2E)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"01AJ2E",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"2473",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (32AK1N)",	"descripcion":"S/N (32AK1N)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"32AK1N",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"3745",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (36AM7H)",	"descripcion":"S/N (36AM7H)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"36407H",	"plataforma":"",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"6781",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (75AF7R)",	"descripcion":"S/N (75AF7R)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"75AF7R",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"7838",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (76AK9H)",	"descripcion":"S/N (76AK9H)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"76AK9H",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"1103",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (93AD3X)",	"descripcion":"S/N (93AD3X)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"93AD3X",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"6807",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"S/N (97AT5X)",	"descripcion":"S/N (97AT5X)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"97AT5X",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"947",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"04 (73AP8R)",	"descripcion":"04 (73AP8R)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"PU3499A",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"948",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"05 (72AP8R)",	"descripcion":"05 (72AP8R)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"72AP8R",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"3041",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"07 (70AK1N)",	"descripcion":"07 (70AK1N)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"FRANCISCO CHAVEZ BANDA",	"placas":"70AK1N",	"plataforma":"",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"1100",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"17 (74AF7R)",	"descripcion":"17 (74AF7R)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"74AF7R",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"},
+      {"code":"6383",	"operacion":"E",	"operacion_desc":"SOLOG MTY",	"vehiculo":"26 (197AJ9)",	"descripcion":"26 (197AJ9)",	"trans_code":"JAVR",	"trans_nombre":"EXPRESS VILLARREAL",	"chofer_nombre":"",	"placas":"197AJ9",	"plataforma":"TRONCALNET",	"antena":"SA",	"plataforma2":"",	"status":"E"}
+    ],
+    "getAntenas":[
+      {"clave":"1", "descripcion":"Antena1"},
+      {"clave":"2", "descripcion":"Antena3"},
+      {"clave":"3", "descripcion":"Antena3"},
+      {"clave":"4", "descripcion":"Antena4"},
+      {"clave":"5", "descripcion":"Antena5"},
+      {"clave":"6", "descripcion":"Antena6"},
+      {"clave":"7", "descripcion":"Antena7"},
+      {"clave":"8", "descripcion":"Antena8"},
+      {"clave":"9", "descripcion":"Antena9"}
+    ]
+   
+}

@@ -1,0 +1,59 @@
+// Alineaciones
+
+// Texto
+.txt-left {
+	text-align: left !important;
+}
+
+.txt-center {
+	text-align: center !important;
+}
+
+.txt-right {
+	text-align: right !important;
+}
+
+// Flex
+// Justify - Content
+.justify-start {
+	@include display-flex;
+	@include flex-justify-content(flex-start !important);
+	-ms-flex-pack: start !important;
+}
+
+.justify-end {
+	@include display-flex;
+	@include flex-justify-content(flex-end !important);
+	-ms-flex-pack: end !important;
+}
+
+.justify-center {
+	@include display-flex;
+	@include flex-justify-content(center !important);
+}
+
+// Align Self
+.align-self-end {
+	@include flex-align-self(flex-end !important);
+	-ms-flex-item-align: end !important;
+}
+
+// Align Content
+.align-items-start {
+	@include flex-align-items(flex-start !important);
+	-ms-flex-align: start !important;
+}
+
+.align-items-center {
+	@include flex-align-items(center !important);
+}
+
+.align-items-end {
+	@include flex-align-items(flex-end !important);
+	-ms-flex-align: end !important;
+}
+
+// Flex direction
+.flex-direction-column {
+	@include flex-direction(column);
+}

@@ -1,0 +1,424 @@
+<!-- Encabezado -->
+<app-encabezado></app-encabezado>
+<!-- Menú -->
+<app-menu></app-menu>
+<!-- Contenido-->
+<div class="contenido">
+  <!-- Título -->
+  <div class="titulo_seccion">
+    <div class="titulo_cuadro">
+      <img src="../../assets/componentes/cuadro_subtitulo.jpg" />
+    </div>
+    <div class="titulo_texto">
+      <label>CATÁLOGO DE VEHÍCULOS</label>
+    </div>
+    <div class="titulo_botones">
+      <ul>
+        <li>
+          <a class="boton_nuevo">Nuevo</a>
+        </li>
+        <li>
+          <a class="boton_regresar">Regresar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Información de vehículos -->
+  <!-- Filtros -->
+  <div class="cajas">
+    <div class="informativo s1100 flex-wrap-colum">
+      <div class="fila">
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">OPERACIÓN:</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_3-7c">
+          <div class="etiqueta_principal">TRANSPORTISTA:</div>
+          <div class="datos">
+            <select>
+              <option></option>
+            </select>
+          </div>
+        </div>
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">VEHÍCULO:</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">ANTENA:</div>
+          <div class="datos">
+            <input type="text">
+          </div>
+        </div>
+        <div class="size_1-3c">
+          <div class="etiqueta_principal">STATUS:</div>
+          <div class="datos">
+            <select>
+              <option>PENDIENTE</option>
+            </select>
+          </div>
+        </div>
+        <div class="size_1-1c">
+          <div class="datos align-self-end">
+            <input type="button" value="Consultar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Encabezado tabla -->
+  <div class="nombretabla">
+    <div class="nombretabla_texto">
+      <label>INFORMACIÓN DE VEHÍCULOS</label>
+      <div class="paginas">
+        <label class="paginas1">999</label>
+        <label class="paginas2">RESULTADOS EN</label>
+        <label class="paginas3">999</label>
+        <label class="paginas2">PÁGINA(S)</label>
+        <label class="selector">
+          <select>
+            <option>Páginas 1 de 999</option>
+            <option>Páginas 999 de 999</option>
+          </select>
+        </label>
+        <div class="botonPagA">
+          <img src="../../assets/componentes/b_anterior.png" />
+        </div>
+        <label class="paginas5">999</label>
+        <div class="botonPagS">
+          <img src="../../assets/componentes/b_siguiente.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tabla -->
+  <div class="table-container table-doble">
+    <table class="scrollTableX">
+      <thead>
+        <tr>
+          <th class="cVoperacion"></th>
+          <th class="cVvehiculo txt-left">Vehículo</th>
+          <th class="cVdescripcion txt-left">Descripción</th>
+          <th class="cVscac">SCAC</th>
+          <th class="cVtransportista txt-left">Transportista</th>
+          <th class="cVoperador txt-left">Operador</th>
+          <th class="cVplacas">Placas</th>
+          <th class="cVplataforma">Plataforma</th>
+          <th class="cVantena">Antena</th>
+          <th class="cVplataforma">Plataforma 2</th>
+          <th class="cVantena">Antena 2</th>
+          <th class="cVstatus txt-left">Status</th>
+          <th class="cicon">Editar</th>
+          <th class="cicon">Inactivar</th>
+          <th class="cicon">Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="txt-center">
+            <img src="../../assets/logos/trackit.png">
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td class="txt-center">
+            <label>CARD</label>
+          </td>
+          <td>
+            <label>CARDENAL EXPRESS</label>
+          </td>
+          <td>
+            <label>FERNANDO PACHECO GALDEACNO</label>
+          </td>
+          <td class="txt-center">
+            <label>41AGAZ</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td>
+            <label>PENDIENTE</label>
+          </td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/pencil-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/trash-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/detail-icon.png"></a></td>
+        </tr>
+        <tr>
+          <td class="txt-center">
+            <img src="../../assets/logos/trackit.png">
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td class="txt-center">
+            <label>CARD</label>
+          </td>
+          <td>
+            <label>CARDENAL EXPRESS</label>
+          </td>
+          <td>
+            <label>FERNANDO PACHECO GALDEACNO</label>
+          </td>
+          <td class="txt-center">
+            <label>41AGAZ</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td>
+            <label>PENDIENTE</label>
+          </td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/pencil-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/trash-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/detail-icon.png"></a></td>
+        </tr>
+        <tr class="selected">
+          <td class="txt-center">
+            <img src="../../assets/logos/trackit.png">
+          </td>
+          <td>
+            <label>T99 (41GAZ)</label>
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td class="txt-center">
+            <label>CARD</label>
+          </td>
+          <td>
+            <label>CARDENAL EXPRESS</label>
+          </td>
+          <td>
+            <label>FERNANDO PACHECO GALDEACNO</label>
+          </td>
+          <td class="txt-center">
+            <label>41AGAZ</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td>
+            <label>PENDIENTE</label>
+          </td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/pencil-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/trash-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/detail-icon.png"></a></td>
+        </tr>
+        <tr>
+          <td class="txt-center">
+            <img src="../../assets/logos/trackit.png">
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td>
+            <label>F10 (41GAZ)</label>
+          </td>
+          <td class="txt-center">
+            <label>CARD</label>
+          </td>
+          <td>
+            <label>CARDENAL EXPRESS</label>
+          </td>
+          <td>
+            <label>FERNANDO PACHECO GALDEACNO</label>
+          </td>
+          <td class="txt-center">
+            <label>41AGAZ</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td class="txt-center">
+            <label>68754DFKODFUI</label>
+          </td>
+          <td class="txt-center">
+            <label>SA</label>
+          </td>
+          <td>
+            <label>PENDIENTE</label>
+          </td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/pencil-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/trash-icon.png"></a></td>
+          <td class="txt-center"><a href=""><img src="../../assets/componentes/detail-icon.png"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Seguros -->
+  <!-- Encabezado tabla -->
+  <div class="nombretabla accionesST">
+    <div class="nombretabla_texto">
+      <label>SEGUROS :<span> T99 (41AGAZ)</span></label>
+    </div>
+    <div class="titulo_botones">
+      <ul>
+        <li>
+          <a class="boton_agregar_sub" (click)="agregarVehiculo()">Agregar</a>
+        </li>
+        <li>
+          <a class="boton_guardar_sub">Guardar</a>
+        </li>
+        <li>
+          <a class="boton_cancelar_sub">Cancelar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Tabla-->
+  <div class="table-container table-doble">
+    <table class="scrollTableX">
+      <thead>
+        <tr>
+          <th class="cVtipo_seguro txt-left">* Tipo de Seguro</th>
+          <th class="cVaseguradora txt-left">Aseguradora</th>
+          <th class="cVnumero_poliza txt-left">* Número de Póliza</th>
+          <th class="cVfecha_vencimiento">* Fecha de Vencimiento</th>
+          <th class="cVstatus txt-left">Status</th>
+          <th class="cicon">Editar</th>
+          <th class="cicon">Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <select>
+              <option></option>
+            </select>
+          </td>
+          <td>
+            <input type="text" value="GNP">
+          </td>
+          <td>
+            <input type="text" class="txt-right" value="09879">
+          </td>
+          <td>
+            <dp-date-picker [config]="config"></dp-date-picker>
+          </td>
+          <td>
+            <select>
+              <option></option>
+            </select>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/cancel-icon.png"></a>
+          </td>
+          <td class="txt-center"></td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Responsabilidad Civil</label>
+          </td>
+          <td>
+            <label>GNP</label>
+          </td>
+          <td class="txt-right">
+            <label>09879</label>
+          </td>
+          <td class="txt-center">
+            <label>10/10/2022</label>
+          </td>
+          <td>
+            <label>VIGENTE</label>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/pencil-icon.png"></a>
+          </td>
+          <td class="txt-center">
+            <a href=""><img src="../../assets/componentes/trash-icon.png"></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Pie-->
+<app-pie></app-pie>

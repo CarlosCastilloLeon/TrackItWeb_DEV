@@ -1,0 +1,181 @@
+// Estilos generales
+@import "../../estilos/variables";
+@import "../../estilos/mixins";
+
+// Menú
+.contenedorMenu {
+	height: 22px;
+	line-height: 22px;
+	background-image: url(../../assets/componentes/barra_negro.jpg);
+	background-repeat: repeat-x;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 1px 7px $shadow-color;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	font-family: $primary-font-stack;
+	font-weight: 500;
+
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		float: left;
+		border-style: solid;
+		border-width: 0 1px 0 0;
+		border-color: $lighter-color;
+		position: relative;
+		text-align: left;
+
+		&.size {
+			&_catalogos {
+				ul {
+					width: 120px;
+				}
+
+				&-sistema {
+					ul {
+						width: 110px;
+					}
+				}
+
+				&-transportes {
+					ul {
+						width: 80px;
+					}
+				}
+			}
+		}
+
+		a {
+			display: block;
+			padding: 4px 14px;
+			font-size: 11px;
+			line-height: 14px;
+			text-decoration: none;
+			display: block;
+			text-transform: uppercase;
+			vertical-align: middle;
+			@include transition(background-color .1s ease);
+			color: $lighter-color;
+
+			&:link,
+			&:visited {
+				color: $lighter-color;
+			}
+
+			&:hover,
+			&:active {
+				background-color: transparent;
+				color: $lighter-color;
+			}
+		}
+
+		&:hover {
+			& > ul {
+				left: 0;
+				opacity: 1;
+			}
+
+			& > a {
+				background-color: $corporative-color-2;
+			}
+
+			ul {
+				li {
+					ul {
+						background: $bg-submenu;
+						top: 0;
+						left: 0;
+						border-left: 1px solid $gray-complement-1;
+						border-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: -9999px;
+		opacity: 0;
+		@include transition(opacity .1s ease);
+		z-index: 10;
+		background-color: $bg-footer;
+		border-top: 1px solid $lighter-color;
+
+		li {
+			float: left;
+			min-height: 1px;
+			vertical-align: middle;
+			border-width: 0;
+			width: 100%;
+			line-height: 24px;
+
+			a {
+				border-bottom-width: 1px;
+				border-right-style: none;
+				border-bottom-style: solid;
+				border-bottom-color: $lighter-color;
+				text-transform: none;
+				font-weight: normal;
+
+				&:first-letter {
+					text-transform: uppercase;		
+				}
+			}
+
+			&:hover {
+				position: relative;
+				z-index: 599;
+				cursor: default;
+				background-color: $corporative-color-2;
+
+				& > ul {
+					left: 0;
+					opacity: 1;
+				}
+
+				& > a {
+					background-color: transparent;
+				}
+			}
+
+			ul {
+				background-color: $bg-submenu;
+				top: 0;
+				margin-left: 100%;
+
+				li {
+					ul {
+						background-color: $gray-complement-1
+					}
+
+					a {
+						&:hover,
+						&:active {
+							background-color: $corporative-color-2-light
+						}
+					}
+				}
+			}
+
+			&.has-sub {
+				& > a {
+					&:after {
+						content: '\0025BA';
+						position: absolute;
+						right: 10px;
+						font-size: 9px;
+					}
+				}
+			}
+		}
+	}
+}
