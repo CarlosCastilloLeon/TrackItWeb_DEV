@@ -4,7 +4,7 @@
     <div class="titulo_cuadro">
       <img src="../../assets/componentes/cuadro_titulo.jpg" />
     </div>
-    <div class="titulo_texto">CLIENTE / DESTINO</div>
+    <div class="titulo_texto"> CLIENTE / DESTINO</div>
    
     <div class="titulo_botones">
       <ul>
@@ -40,8 +40,10 @@
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Operación</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select id="operacion" name="operacion" (change)="selectChangeHandlerOper($event)" formControlName="operacion">
+              <option *ngFor="let oper of allOperaciones"  [value]="oper.col1">
+                {{ oper.col2 }}
+              </option>
             </select>
           </div>
         </div>
@@ -50,16 +52,17 @@
           <div class="datos">
             <input 
             type="text" 
-            name="veh"
-           formControlName="veh"
+            name="vehiculo"
+           formControlName="vehiculo"
              />
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Status</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select formControlName="status">
+              <option value="E">ACTIVO</option>
+              <option value="D">INACTIVO</option>
             </select>
           </div>
         </div>
@@ -68,14 +71,16 @@
         <div class="size_7-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Descripción</div>
           <div class="datos">
-            <input type="text" placeholder="DESCRIPCIÓN">
+            <input type="text" placeholder="DESCRIPCIÓN" formControlName="descripcion">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal">Tipo</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select formControlName="tipo">
+              <option *ngFor="let tipos of allTiposVehiculos"  [value]="tipos.col1">
+                {{ tipos.col2 }}
+              </option>
             </select>
           </div>
         </div>
@@ -84,15 +89,22 @@
         <div class="size_5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Transportista</div>
           <div class="datos">
-            <input type="text" >
+            <select id="transportista" name="transportista"  (change)="selectChangeHandlerTrans($event)" formControlName="transportista">
+              <option *ngFor="let trans of allTransportistas" [value]="trans.col1">
+                {{ trans.col2 }}
+              </option>
+            </select>
           </div>
         </div>
         <div class="size_5c">
-          <div class="etiqueta_principal">Operador</div>
+          <div class="etiqueta_principal">Operador(p)</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select  formControlName="operador">
+              <option *ngFor="let operadores of allOperadores"  [value]="operadores.col1">
+                {{ operadores.col2 }}
+              </option>
             </select>
+            
           </div>
         </div>
       </div>
@@ -100,25 +112,25 @@
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Placas</div>
           <div class="datos">
-            <input type="text" >
+            <input type="text" formControlName="placas">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal">Marca</div>
           <div class="datos">
-            <input type="text">
+            <input type="text" formControlName="marca">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal">Modelo</div>
           <div class="datos">
-            <input type="text">
+            <input type="text" formControlName="modelo">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal">Color</div>
           <div class="datos">
-            <input type="text">
+            <input type="text" formControlName="color">
           </div>
         </div>
       </div>
@@ -126,8 +138,10 @@
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Plataforma</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select id="plataforma" name="plataforma"  formControlName="plataforma" (change)="selectChangeHandlerPlat1($event)" >
+              <option *ngFor="let platas of allPlataformas" [value]="platas.col1">
+                {{ platas.col2 }}
+              </option>
             </select>
           </div>
         </div>
@@ -146,8 +160,10 @@
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Plataforma 2</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select id="plataforma2" name="plataforma2" formControlName="plataforma2" (change)="selectChangeHandlerPlat2($event)">
+              <option *ngFor="let platas of allPlataformas2" [value]="platas.col1">
+                {{ platas.col2 }}
+              </option>
             </select>
           </div>
         </div>
@@ -167,19 +183,19 @@
         <div class="size_5c">
           <div class="etiqueta_principal">Motor</div>
           <div class="datos">
-            <input type="text" >
+            <input type="text" formControlName="num_motor">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> No. Ejes</div>
           <div class="datos">
-            <input type="number">
+            <input type="number" formControlName="no_ejes">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> No. Serie</div>
           <div class="datos">
-            <input type="text" value="41AGAZ">
+            <input type="text" formControlName="num_serie">
           </div>
         </div>
       </div>
@@ -187,15 +203,17 @@
         <div class="size_5c">
           <div class="etiqueta_principal">Tipo de Permiso</div>
           <div class="datos">
-            <select>
-              <option></option>
+            <select formControlName="tipo_permiso">
+              <option value="TPAF01">Autotransporte Federal de carga general.</option>
+              <option value="TPAF02">Transporte privado de carga.</option>
+              <option value="TPAF06">Transporte de carga especializada de gran peso y/o volumen de más 90 toneladas.</option>
             </select>
           </div>
         </div>
         <div class="size_5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Permiso Federal</div>
           <div class="datos">
-            <input type="text">
+            <input type="text" formControlName="permiso_federal">
           </div>
         </div>
       </div>
@@ -203,19 +221,19 @@
         <div class="size_5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> IAVE</div>
           <div class="datos">
-            <input type="text">
+            <input type="text" formControlName="iave">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Peso</div>
           <div class="datos">
-            <input type="number" class="txt-right">
+            <input type="number" class="txt-right" formControlName="peso">
           </div>
         </div>
         <div class="size_2-5c">
           <div class="etiqueta_principal"><span class="asterisco">*</span> Arrendado</div>
             <div class="datos">
-              <input id="arrendado" type="checkbox" checked="checked">
+              <input id="arrendado" type="checkbox" checked="checked" formControlName="arrendado">
               <label for="arrendado"></label>
             </div>
         </div>
@@ -288,14 +306,14 @@
       </thead>
       <tbody>
         <tr *ngFor="let antena of antenasAux ">
-          <td class="txt-center"  (click)="selecAntena(antena.clave)">
+          <td class="txt-center"  (click)="selecAntena(antena.col1)">
               <img src="../../assets/logos/trackit.png" style="cursor:pointer">
           </td>
           <td>
-            <label> {{antena.clave}} </label>
+            <label> {{antena.col1}} </label>
           </td>
           <td>
-            <label> {{antena.descripcion}} </label>
+            <label> {{antena.col1}} </label>
           </td> 
          </tr>
       </tbody>
@@ -363,14 +381,14 @@
       </thead>
       <tbody>
         <tr *ngFor="let antena of antenasAux2 ">
-          <td class="txt-center"  (click)="selecAntena2(antena.clave)">
+          <td class="txt-center"  (click)="selecAntena2(antena.col1)">
               <img src="../../assets/logos/trackit.png" style="cursor:pointer">
           </td>
           <td>
-            <label> {{antena.clave}} </label>
+            <label> {{antena.col1}} </label>
           </td>
           <td>
-            <label> {{antena.descripcion}} </label>
+            <label> {{antena.col1}} </label>
           </td> 
          </tr>
       </tbody>

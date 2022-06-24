@@ -1,0 +1,16 @@
+{
+    
+    "/ws_tiw_catalogos/api/vehiculos/*": {
+        "target": "http://201.131.124.2:8080",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin":true
+    },
+    "/ws_tiw_lov/api/*": {
+        "target": "http://201.131.124.2:8080",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin":true
+    }
+
+}

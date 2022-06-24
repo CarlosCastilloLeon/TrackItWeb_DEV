@@ -1,5 +1,5 @@
 export interface ListaantenasI{
 
-    clave: string;
-    descripcion: string;
+    col1: string;
+    col2: string;
 }

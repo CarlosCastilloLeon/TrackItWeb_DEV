@@ -29,9 +29,10 @@
           <div class="size_1-3c">
             <div class="etiqueta_principal">OPERACIÓN:</div>
             <div class="datos">
-              <select id="operacion" name="operacion" [(ngModel)]="selectedOper">
-                <option *ngFor="let oper of allOperaciones"  [value]="oper.operacion">
-                  {{ oper.descripcion }}
+              <select id="operacion" name="operacion" [(ngModel)]="selectedOper" (change)="selectChangeHandlerOper($event)">
+                <option selected value="undefined">TODOS</option>
+                <option *ngFor="let oper of allOperaciones"  [value]="oper.col1">
+                  {{ oper.col2 }}
                 </option>
               </select>
             </div>
@@ -39,9 +40,10 @@
           <div class="size_3-7c">
             <div class="etiqueta_principal">TRANSPORTISTA:</div>
             <div class="datos">
-              <select id="transportista" name="transportista" [(ngModel)]="selectedTrans">
-                <option *ngFor="let trans of allTransportistas" [value]="trans.code">
-                  {{ trans.nombre }}
+              <select id="transportista" name="transportista" [(ngModel)]="selectedTrans" (change)="selectChangeHandlerTrans($event)">
+                <option selected value="undefined">TODOS</option>
+                <option *ngFor="let trans of allTransportistas" [value]="trans.col1">
+                  {{ trans.col2 }}
                 </option>
               </select>
             </div>
@@ -61,10 +63,10 @@
           <div class="size_1-3c">
             <div class="etiqueta_principal">STATUS:</div>
             <div class="datos">
-              <select [(ngModel)]="selectedStatus">
-                <option>TODOS</option>
-                <option>ACTIVO</option>
-                <option>INACTIVO</option>
+              <select [(ngModel)]="selectedStatus" (change)="selectChangeHandlerStatus($event)">
+                <option   >TODOS</option>
+                <option   selected value="undefined">ACTIVO</option>
+                <option   >INACTIVO</option>
               </select>
             </div>
           </div>
@@ -107,7 +109,7 @@
     
     <!-- Tabla -->
     <div class="table-container table-doble">
-      <table class="scrollTableX">
+      <table class="scrollTableX" id="myTable">
         <thead>
           <tr>
             <th class="cVoperacion"></th>
@@ -187,7 +189,7 @@
     
 
 
-  <!--
+  
   <div class="nombretabla accionesST">
     <div class="nombretabla_texto">
       <label>SEGUROS :<span> T99 (41AGAZ)</span></label>
@@ -318,7 +320,7 @@
       </tbody>
     </table>
   </div>
-  -->
+  
 
 </div>
   
